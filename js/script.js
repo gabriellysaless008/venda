@@ -1,35 +1,29 @@
-
-let estoque = 200;
-
+let estoque = 7;
 
 function comprar(){
+    for ( let contador = 0; contador < 3; contador++ ){
+    
+        const nome_cliente = document.getElementById( "nome" ).value;
+        console.log ( nome_cliente );
 
+        const nome_produto = document.getElementById( "produto" ).value;
+        console.log ( nome_produto );
 
-    let compra_venda = 0;
+        const quantidade_vendida = document.getElementById( "quantidade" ).value;
+        console.log ( quantidade_vendida );
 
-   
-    const nome_cliente = document.getElementById("nome").value;
-    const nome_produto = document.getElementById("produto").value;
-    const quantidade_produto = document.getElementById("quantidade").value;
+        if (quantidade_vendida > estoque){
+            console.log( "acabou o estoque" );
+            
+        } else {
+            consoole.log( "sua compra foi efetuada com sucesso!" );
+            estoque = estoque - quantidade_vendida;
 
-    if (quantidade_produto > 200){
-        alert ("acabou o estoque");
-        
-    } else {
-        alert ("poderá efetuar a compra");
+        }
+
+        console.log(contador)
+
     }
-
-    
-       
-    
-
-
-    
-      
-    
-
-
-
 }
 
 
